@@ -1,0 +1,342 @@
+{
+    "E8Qj3l5E0ocqHcmPayrollEmployeeSavev2": {
+        "lambda": {
+            "headers": {
+                "X-Senior-Token": "Bearer 9ecfe56397984426dbc87dbf6cbcaf24"
+            },
+            "body": {
+                "sheetContract": {
+                    "admissionOriginType": {
+                        "key": "NORMAL",
+                        "value": "Normal"
+                    },
+                    "hireDate": "2015-01-01",
+                    "registernumber": 44,
+                    "registrationNumber": 45,
+                    "hireType": {
+                        "key": "Reemprego",
+                        "value": "2 - Reemprego"
+                    },
+                    "situation": {
+                        "tableId": "94733A571ACC4E8A852D3855F7B82DAF",
+                        "name": "Trabalhando"
+                    },
+                    "eSocialAdmissionType": {
+                        "key": "TYPE_01",
+                        "value": "Admissão"
+                    },
+                    "categoryESocial": {
+                        "key": "Category_101",
+                        "value": "101 - Empregado - Geral, inclusive o empregado público da administração direta ou indireta contratado pela CLT (Vigente desde 01/01/2015)"
+                    },
+                    "sefipCategoryType": {
+                        "key": "TYPE_01",
+                        "value": "Empregado (Vigente desde 01/01/2015)"
+                    },
+                    "unemploymentInsuranceType": {
+                        "key": "NOT_CONSULTED",
+                        "value": "Não consultado"
+                    },
+                    "appearsinRais": "false",
+                    "actingType": {
+                        "tableId": "20E27F26119E41989134BF5EC279D131",
+                        "name": "Atuação Principal"
+                    },
+                    "employeeType": {
+                        "key": "EMPLOYEE",
+                        "value": "1 - Colaborador"
+                    },
+                    "employmentRelationship": {
+                        "tableId": "B7AD81A045584B68B3E3E2B65547BCD4",
+                        "name": "10 - Trb.Urb,Emp.Jur,CLT (Vigente desde 01/01/2015)"
+                    },
+                    "duration": 30,
+                    "extension": 60,
+                    "endDate": "2015-03-31",
+                    "customFieldsEmployee": [
+                        {
+                            "field": "USU_CarCon",
+                            "value": null
+                        }
+                    ],
+                    "customFieldsHistoricalExpenseNature": []
+                },
+                "sheetDocument": {
+                    "cpfNumber": "01313035890",
+                    "pisNumber": "01340089715",
+                    "pisIssuanceDate": "1988-01-01",
+                    "ctpsNumber": "000457814",
+                    "ctpsSerie": "003",
+                    "ctpsState": {
+                        "tableId": "D7D8B5DD15FC456299CD0727D4EE1A4C",
+                        "name": "Santa Catarina"
+                    },
+                    "ctpsIssuanceDate": "1988-01-01",
+                    "rgNumber": "32143",
+                    "rgIssuer": "SSP",
+                    "rgState": {
+                        "tableId": "D7D8B5DD15FC456299CD0727D4EE1A4C",
+                        "name": "Santa Catarina"
+                    },
+                    "rgIssuanceDate": "1988-01-01",
+                    "customFieldsRg": []
+                },
+                "sheetFinancial": {
+                    "payType": {
+                        "key": "Monthly",
+                        "value": "Mensal"
+                    },
+                    "payMode": {
+                        "key": "BankRelationship",
+                        "value": "Relação bancária"
+                    },
+                    "receivesThirteenthSalary": "true",
+                    "receivesSalaryAdvance": "false",
+                    "bank": {
+                        "tableId": "5A295A0A8D9244EB88D3E30444A77D40",
+                        "name": "250 - CAIXA ECONOMICA"
+                    },
+                    "bankBranch": {
+                        "tableId": "8A2F92683E60427A8EDB9FF94A1D53DE",
+                        "name": "150 - Centro"
+                    },
+                    "accountType": {
+                        "key": "SalaryAccount",
+                        "value": "3 - Conta Salário"
+                    },
+                    "accountNumber": "131",
+                    "accountDigit": "058",
+                    "optingForFGTS": "false",
+                    "customFieldsAccount": [],
+                    "useHistoricalBankAccount": false,
+                    "hireDate": "1900-01-01"
+                },
+                "sheetInitial": {
+                    "company": {
+                        "tableId": "3F750530C51A4F1E89C479DEC8A1ADCD",
+                        "name": "1 - Demonstra Ind.& Com. Têxtil S/A"
+                    },
+                    "contractNationality": {
+                        "key": "National",
+                        "value": "1 - Nacional"
+                    },
+                    "employee": {
+                        "tableId": "13DEC2EC12894FA1995407920D30020B",
+                        "name": "Ana Paula Theiss"
+                    },
+                    "contractType": {
+                        "key": "Employee",
+                        "value": "1 - Empregado"
+                    },
+                    "person": {
+                        "tableId": "D54C7F4692BE4FD4915ECBBC15C16353",
+                        "name": "Ana Paula Theiss"
+                    }
+                },
+                "sheetPersona": {
+                    "attachment": {
+                        "attachmentId": "4F662011577A4424A18E127BD4EB9289",
+                        "fileId": "95FF063DD420472AB919CD0170AD7BEE/1_1_44.bmp",
+                        "thumbnail": false
+                    },
+                    "gender": {
+                        "key": "Female",
+                        "value": "Feminino"
+                    },
+                    "birthday": "1960-11-04",
+                    "maritalStatus": {
+                        "key": "Married",
+                        "value": "2 - Casado"
+                    },
+                    "degreeOfEducation": {
+                        "tableId": "A372AF395E3E48BEB692479C895DDF15",
+                        "name": "10 - Pós-Graduação"
+                    },
+                    "nationality": {
+                        "tableId": "F4EFCF5BB74542E8992C39860F78B5B7",
+                        "name": "10 - Brasileiro"
+                    },
+                    "race": {
+                        "key": "Black",
+                        "value": "2 - Preta"
+                    },
+                    "countryOfBirthday": {
+                        "tableId": "BE821ADCD1FA4B3F9C28F49A0C0FE9CF",
+                        "name": "Brasil"
+                    },
+                    "stateOfBirthday": {
+                        "tableId": "D7D8B5DD15FC456299CD0727D4EE1A4C",
+                        "name": "Santa Catarina"
+                    },
+                    "cityOfBirthday": {
+                        "tableId": "57E64AFB318F466DA2E1431FC4647CE2",
+                        "name": "BLUMENAU"
+                    },
+                    "country": {
+                        "tableId": "BE821ADCD1FA4B3F9C28F49A0C0FE9CF",
+                        "name": "Brasil"
+                    },
+                    "cep": "89052320",
+                    "state": {
+                        "tableId": "D7D8B5DD15FC456299CD0727D4EE1A4C",
+                        "name": "Santa Catarina"
+                    },
+                    "city": {
+                        "tableId": "57E64AFB318F466DA2E1431FC4647CE2",
+                        "name": "BLUMENAU"
+                    },
+                    "addressType": {
+                        "key": "Street",
+                        "value": "Rua"
+                    },
+                    "addressName": "Rua 25 de Agosto",
+                    "addressNumber": "748",
+                    "addressComplement": "Casa",
+                    "phones": [
+                        {
+                            "id": "F7DEA7FD441C40CE82C10CEADA8C1162",
+                            "phoneType": {
+                                "key": "Personal",
+                                "value": "1 - Pessoal/Residencial"
+                            },
+                            "countryCode": "55",
+                            "localCode": "47",
+                            "number": "33225889",
+                            "extention": null
+                        }
+                    ],
+                    "isDisability": "false",
+                    "customFieldsPerson": []
+                },
+                "sheetPlace": {
+                    "workstationGroup": {
+                        "tableId": "EFD68D0768E247AD977CDF79C788594C",
+                        "name": "ADM012 - Responsável Segurança Ocupacional (Vigente desde 01/01/2015)"
+                    },
+                    "branch": {
+                        "tableId": "033650A64C3445C1BC43FAA9457248CC",
+                        "name": "1 - Demonstra S/A - Matriz (Vigente desde 01/01/2015)"
+                    },
+                    "costCenter": {
+                        "tableId": "E25EF9F854324FBA9F3F8FD25A616537",
+                        "name": "1404 - Segurança (Vigente desde 01/01/2015)"
+                    },
+                    "department": {
+                        "tableId": "0886A54BF76644AFA54B3667928B31AA",
+                        "name": "1.02.01.03 - Segurança (Vigente desde 01/01/2015)"
+                    },
+                    "jobPosition": {
+                        "tableId": "C471246020614D8884A96B947E116B99",
+                        "name": "7 - Técnico Segurança Trabalho (Vigente desde 01/01/2015)"
+                    },
+                    "workstationGroupStartDate": "2015-01-01",
+                    "branchStartDate": "2015-01-01",
+                    "costCenterStartDate": "2015-01-01",
+                    "departmentStartDate": "2015-01-01",
+                    "jobPositionStartDate": "2015-01-01",
+                    "customFieldsHistoricalWorkstation": [],
+                    "customFieldsHistoricalCostCenter": [],
+                    "customFieldsHistoricalJobPosition": [],
+                    "customFieldsHistoricalCompanyBranch": [],
+                    "customFieldsHistoricalDepartment": []
+                },
+                "sheetSalary": {
+                    "salaryType": {
+                        "key": "Monthly",
+                        "value": "Mensalista (Vigente desde 01/01/2015)"
+                    },
+                    "wageScale": {
+                        "tableId": "3B9298072C924EF78682F8CCDE661CA3",
+                        "name": "Demonstração (Vigente desde 01/01/2015)"
+                    },
+                    "wageClass": {
+                        "tableId": "02FD1A35967241C8BDDF28742877B9CD",
+                        "name": "C (Vigente desde 01/01/2015)"
+                    },
+                    "wageLevel": {
+                        "tableId": "4DE8C687E33D4755BC0A4FC46139E8F0",
+                        "name": "1 (Vigente desde 01/01/2015)"
+                    },
+                    "salary": "1216.02",
+                    "customFieldsHistoricalSalary": []
+                },
+                "sheetSyndicate": [
+                    {
+                        "syndicate": {
+                            "tableId": "30E85981ACD64715ACF0DC656BC0A8FB",
+                            "name": "Sind. Indústria Blumenau (Vigente desde 01/01/2015)"
+                        },
+                        "isMainSyndicate": true,
+                        "isUnionized": true,
+                        "isAssistanceFee": false,
+                        "isCosting": false,
+                        "isReversion": false
+                    }
+                ],
+                "sheetWorkSchedule": {
+                    "workshiftStartDate": "2015-01-01",
+                    "workshift": {
+                        "tableId": "47EFE9A1F0B3428186009433923E8DF0",
+                        "name": "14:00 1800-1900 22:00/2.Turno (Vigente desde 01/01/2015)"
+                    },
+                    "workshiftGroup": {
+                        "tableId": "41575889915D48A884064BB467864759",
+                        "name": "1 (Vigente desde 01/01/2015)"
+                    },
+                    "customFieldsHistoricalWorkshift": []
+                },
+                "sheetOtherContract": {
+                    "otherContractType": {
+                        "key": "SINGLE_CONTRACT",
+                        "value": "Contrato único"
+                    },
+                    "customFieldsOtherContract": []
+                },
+                "sheetEntries": {},
+                "sheetComplement": {
+                    "retirementType": null,
+                    "retirementDate": null,
+                    "taxExemption": null,
+                    "movementSefipRetirement": null,
+                    "transportationVoucherScale": null,
+                    "pointEmbarkation": null,
+                    "transportationVoucherStartDate": null,
+                    "healthAndSafety": {
+                        "lastMedicalExaminationDate": null,
+                        "nextMedicalExaminationDate": null
+                    },
+                    "healthPlan": {
+                        "healthPlanType": null,
+                        "healthPlanCode": null,
+                        "registrationCode": null,
+                        "inclusionDate": null,
+                        "exclusionDate": null,
+                        "healthplanCode": null
+                    },
+                    "qualificationStructure": {
+                        "qualification": null,
+                        "wagescale": null,
+                        "wageclass": null,
+                        "wagelevel": null
+                    },
+                    "badge": null,
+                    "issueDotCard": {
+                        "key": "Yes",
+                        "value": "Sim"
+                    },
+                    "controlPoint": {
+                        "key": "TYPE_1",
+                        "value": "Controle de Ponto e Refeitório"
+                    },
+                    "deleteClockingEventType": {
+                        "key": "TYPE_1",
+                        "value": "Não eliminar"
+                    },
+                    "customFieldsHistoricalTransportationVoucherScale": [],
+                    "customFieldsRetirement": [],
+                    "healthPlanType": null
+                }
+            }
+        }
+    }
+}
