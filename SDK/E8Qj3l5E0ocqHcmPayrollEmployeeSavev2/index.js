@@ -16,6 +16,7 @@ exports.handler = async event => {
    let body = parseBody(event);
    let tokenSeniorX = event.headers['X-Senior-Token'];
    let URL = '';
+   const hostPratique = "ec2-3-237-205-148.compute-1.amazonaws.com";
    
    // chamando o axios 
    const instance = axios.create({
@@ -50,10 +51,10 @@ exports.handler = async event => {
          }      
       
       if (textoTipoAdmissao !== 'Normal') {
-         return sendRes(400,'O Indicativo da Admissão deve ser do tipo "Normal" e não do tipo "'+textoTipoAdmissao+'". Por favor, corrija!');
+          return sendRes(400,'O Indicativo da Admissão deve ser do tipo "Normal" e não do tipo "'+textoTipoAdmissao+'". Por favor, corrija!');
       } 
     } else {
-            // Verifica a Categoria do eSocial, pois o controle doIndicativo só pode ser feito para categorias abaixo de 200
+            // Verifica a Categoria do eSocial, pois o controle do Indicativo só pode ser feito para categorias abaixo de 200
             let campoCategEsocial = Object.entries(body.sheetContract.categoryESocial);
             let textoCategEsocial;
             let numeroCategEsocial;
@@ -77,7 +78,7 @@ exports.handler = async event => {
     
     
     // 3º Em uma alteração de colaborador (Colaborador já cadastrado), implementar uma validação que impeça o usuário de alterar o nome do Colaborador ####
-    if(body.sheetInitial.employee) {
+    if (body.sheetInitial.employee) {
        if (body.sheetInitial.employee.name  !== body.sheetInitial.person.name) {
            return sendRes(400,'Não é permitido alterar o Nome do Colaborador!');  
        }
@@ -96,7 +97,7 @@ exports.handler = async event => {
              }
              else {
                    // Monta a URL que irá buscar no WS G5 e recebe o retorno se a escala é do tipo Permanente
-                   URL =  'http://ec2-3-236-181-162.compute-1.amazonaws.com:8080/SXI/G5Rest?module=rubi&service=com.senior.g5.rh.fp.escala&port=consulta&codEsc='+`${codigoEscala}`;
+                   URL =  `http://${hostPratique}:8080/SXI/G5Rest?module=rubi&service=com.senior.g5.rh.fp.escala&port=consulta&codEsc=${codigoEscala}`;
  
                    // Busca a resposta do WS
                    let responseTipoEscala = await axios.get(URL).then(req => {return req.data}).catch(err => console.log(err));
@@ -135,30 +136,19 @@ exports.handler = async event => {
 
     // Buscar o código da Empresa para enviar como parametro para o WS que buscará o campo de CNH do Cargo 
     if (body.sheetPlace.jobPosition) {
-       // Pega a empresa (para buscar o estcar)
-       let codigoEmpresa = Object.entries(body.sheetInitial.company);
-       
-       // Traz o texto da Empresa para separação do codigo e titulo
-       for (var [key, value] of codigoEmpresa) {
-          codigoEmpresa = value; 
-         }     
-         
-       // Separa o codigo do nome da empresa
-       codigoEmpresa = codigoEmpresa.split('-')[0].trim();          
+       // Pega a codigo da empresa (para buscar o estcar)
+       let codigoEmpresa = body.sheetInitial.company.name;
+       // Separa o codigo do titulo do cargo
+       codigoEmpresa = codigoEmpresa.split('-')[0].trim();        
        
        // Pega o cargo (para pegar o codigo)
-       let codigoCargo = Object.entries(body.sheetPlace.jobPosition);
-
-       // Traz o texto do tipo de contrato para comparação
-       for (var [key, value] of codigoCargo) {
-          codigoCargo = value; 
-         } 
-
+       let codigoCargo = body.sheetPlace.jobPosition.name;
+       
        // Separa o codigo do titulo do cargo
        codigoCargo = codigoCargo.split('-')[0].trim(); 
-       
+
        // Monta a URL que irá buscar no WS G5 e recebe o retorno se o cargo precisa ter CNH
-       URL =  `http://ec2-3-236-181-162.compute-1.amazonaws.com:8080/SXI/G5Rest?module=rubi&service=com.senior.g5.rh.fp.CnhCargo&port=verifica&codEmp=${codigoEmpresa}&codCar=${codigoCargo}`;
+       URL =  `http://${hostPratique}:8080/SXI/G5Rest?module=rubi&service=com.senior.g5.rh.fp.CnhCargo&port=verifica&codEmp=${codigoEmpresa}&codCar=${codigoCargo}`;
 
        // Busca a resposta do WS
        let responseCNHCargo = await axios.get(URL).then(req => {return req.data}).catch(err => console.log(err));
