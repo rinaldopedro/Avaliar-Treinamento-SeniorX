@@ -29,4 +29,24 @@ validação deve obrigatoriamente atender aos seguintes requisitos:
   
   
 # Para o BPM, o escopo do desafio foi: ##########################################################################################
+* Permitir ao colaborador solicitar férias para si;
+* Selecionar um dos períodos de férias em aberto;
+* Se o período aquisitivo tiver data de vencimento futura, e não tiver nenhuma programação, projetar o saldo em 30 dias. Se já haver programações, descontar a quantidade já       programada do saldo no sistema;
+* Período aquisitivo com data no passado em aberto, considerar o saldo no sistema;
+* As férias poderão ser programadas em até 3 períodos, no primeiro período o usuário pode optar por abono e adiantamento de 13º salário;
+* O total de dias programados (com abono se houver) deve totalizar o saldo, conforme regras acima;
+* Após a solicitação, o fluxo segue para aprovação do gestor imediato (hierarquicamente acima);
+* Após aprovação do gestor, o fluxo segue para análise do papel "RH Férias";
+* Tanto gestor quanto RH podem recusar ou aprovar a solicitação; 
+* Após aprovação final, deverão ser criadas as programações de férias no sistema G5, para o colaborador.
 
+# Solucções BPM
+* Não sei se haberá tempo hábil para testar todas as consistencias feitas, mas a tela verifica diversas situações:
+  1) A data da programação de férias não pode ser anterior ao dia atual, e também não pode ser maior que o limite para o vencimento do 2º período aquisitivo;
+  2) Finais de semana e feriados estão sendo checados;
+  3) Quando há mais de uma programação para o mesmo período aquisitivo a consistência verifica as datas e não permitir interpolação de datas;
+  4) Os dias de férias e abono estão sendo considerados em todo o tempo para a apuração do saldo;
+  5) Caso haja uma programação anterior e a data de férias + dias da programação sejam maiores que a data sugerida de inicial das férias, está sendo validado;
+  6) Há um consumo de WS já no inicio do fluxo, que tráz o nome, a chave do colaborador e uma lista de feriados, para podermos testar isso no fluxo;
+  7) Conforme requisito, a chefia imediata vem do sistema;
+        
